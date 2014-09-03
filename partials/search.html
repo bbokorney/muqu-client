@@ -10,15 +10,6 @@
           </form>
         </div>
       </div>
-      <div class="row" ng-click="queueVideo()">
-        <div class="col-xs-5"><img src="https://i.ytimg.com/vi/5kg6fvb3CHQ/default.jpg"></div>
-        <div class="col-xs-6">
-          <b>Some really long title that makes the words wrap around and stuff</b>
-          <p>4:45</p>
-          <p>432,234,112 views</p>
-        </div>
-      </div>
-
       <div class="row" ng-repeat="result in model.searchResults" ng-click="queueVideo(result)">
         <div class="col-xs-5"><img src="{{result.thumbnailUrl}}"></div>
         <div class="col-xs-6">
