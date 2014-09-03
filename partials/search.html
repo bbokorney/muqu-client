@@ -1,0 +1,32 @@
+<div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <form ng-submit="search()" class="input-group" >
+            <input id="searchBar" type="text" class="form-control" ng-model="model.searchTerm" placeholder="Search">
+            <span class="input-group-btn">
+            <a class="btn btn-default" ng-click="clearSearchResults()"><i class="glyphicon glyphicon-remove"></i></a>
+            <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+            </span>
+          </form>
+        </div>
+      </div>
+      <div class="row" ng-click="queueVideo()">
+        <div class="col-xs-5"><img src="https://i.ytimg.com/vi/5kg6fvb3CHQ/default.jpg"></div>
+        <div class="col-xs-6">
+          <b>Some really long title that makes the words wrap around and stuff</b>
+          <p>4:45</p>
+          <p>432,234,112 views</p>
+        </div>
+      </div>
+
+      <div class="row" ng-repeat="result in model.searchResults" ng-click="queueVideo(result)">
+        <div class="col-xs-5"><img src="{{result.thumbnailUrl}}"></div>
+        <div class="col-xs-6">
+          <p>{{result.title}}</p>
+          <p>{{result.duration}}</p>
+          <p>{{result.views}} views</p>
+        </div>
+      </div>
+      <button id="loadNextItem" class="btn btn-primary" ng-click="loadNextItem()" style="display: none">Load more</button>
+      <h4 class="text-muted" id="loadingMessage">Loading...</h4>
+    </div>
