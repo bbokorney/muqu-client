@@ -1,4 +1,6 @@
 <div class="container">
-<h4>This is the queue.</h4>
-<input type="text" ng-model="model.message">
+<h4>Queue</h4>
+	<ul class="list-group">
+		<li ng-repeat="item in model.queueList" class="list-group-item">{{item.title}}</li>
+	</ul>
 </div>

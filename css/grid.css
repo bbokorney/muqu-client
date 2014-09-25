@@ -24,7 +24,15 @@ hr {
   display: none;
 }
 
+#player {
+  width: 100%;
+}
+
 #loadingMessage {
   display: none;
+  text-align: center;
+}
+
+#title {
   text-align: center;
 }

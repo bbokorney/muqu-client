@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="row" ng-repeat="result in model.searchResults" ng-click="queueVideo(result)">
-        <div class="col-xs-5"><img src="{{result.thumbnailUrl}}"></div>
+        <div class="col-xs-5"><img ng-src="{{result.thumbnailUrl}}"></div>
         <div class="col-xs-6">
           <p>{{result.title}}</p>
           <p>{{result.duration}}</p>
